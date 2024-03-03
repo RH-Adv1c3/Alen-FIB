@@ -68,7 +68,7 @@ end)
 RegisterServerEvent('AlenFIB:FreezeIt')
 AddEventHandler('AlenFIB:FreezeIt', function(status)
 	xd = status
-	TriggerCleitnEvent('AlenFIB:OnDoorUpdate', -1, xd)
+	TriggerClientEvent('AlenFIB:OnDoorUpdate', -1, xd)
 end)
 
 RegisterServerEvent('AlenFIB:OpenDoor')
