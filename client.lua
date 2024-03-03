@@ -131,15 +131,16 @@ function DrawText3D(x, y, z, text)
 end
 
 function NYfly()
+	local pPed = PlayerPedId()
 	DoScreenFadeOut(1000)
 	Wait(1000)
 	NYIpl()
 	
-	SetEntityCoords(PlayerPedId(), tonumber(514.77), tonumber(4752.67), tonumber(-69) + 0.0, 1, 0, 0, 1) 
-	SetEntityHeading(PlayerPedId(), 174.76)
-	FreezeEntityPosition(PlayerPedId(), true)
+	SetEntityCoords(pPed,514.77,4752.67,-69 + 0.0, 1, 0, 0, 1) 
+	SetEntityHeading(pPed, 174.76)
+	FreezeEntityPosition(pPed, true)
 	Wait(1000)
-	FreezeEntityPosition(PlayerPedId(), false)
+	FreezeEntityPosition(pPed, false)
 	
 	DoScreenFadeIn(1000) 
 	anim = true
@@ -149,12 +150,12 @@ function NYfly()
 	
 	Wait(1000)
 	anim = false
-	SetEntityCoords(PlayerPedId(), tonumber(5338.01), tonumber(-5215.3), tonumber(81.71) + 0.0, 1, 0, 0, 1)
-	SetEntityHeading(PlayerPedId(), 275.27)
-	FreezeEntityPosition(PlayerPedId(), true) 
+	SetEntityCoords(pPed,5338.01,-5215.3,81.71 + 0.0, 1, 0, 0, 1)
+	SetEntityHeading(pPed, 275.27)
+	FreezeEntityPosition(pPed, true) 
 	SetDrawMapVisible(true)
 	Wait(8000)
-	FreezeEntityPosition(PlayerPedId(), false) 
+	FreezeEntityPosition(pPed, false) 
 	DoScreenFadeIn(1000)
 	inNY = true
 end
